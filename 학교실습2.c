@@ -1,12 +1,12 @@
 
-  //¼Ò¼öÁ¡ ÀÌÇÏ ÀÚ¸®¼ö°¡ 10ÀÚ¸® ÀÌ»óÀÎ ½Ç¼ö¸¦ ¹Ş°í KM , M , CM , MM ·Î º¯È¯ÇÏ±â
+  //ì†Œìˆ˜ì  ì´í•˜ ìë¦¬ìˆ˜ê°€ 10ìë¦¬ ì´ìƒì¸ ì‹¤ìˆ˜ë¥¼ ë°›ê³  KM , M , CM , MM ë¡œ ë³€í™˜í•˜ê¸°
 void main(){
 	char name[30];
 	int number, km,m,cm,mm;
 	double len ;
-	printf("ÇĞ¹ø(Á¤¼ö), ÀÌ¸§(¹®ÀÚ¿­)À» ÀÔ·ÂÇÏ¼¼¿ä:");
+	printf("ë‚˜(ì •ìˆ˜), ì´ë¦„(ë¬¸ìì—´)ì„ ì…ë ¥í•˜ì„¸ìš”:");
 	scanf("%d %s", &number, name);
-	printf("¼Ò¼öÁ¡ ÀÌÇÏ ÀÚ¸®¼ö°¡ 10ÀÚ¸® ÀÌ»óÀÎ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	printf("ì†Œìˆ˜ì  ì´í•˜ ìë¦¬ìˆ˜ê°€ 10ìë¦¬ ì´ìƒì¸ ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	scanf("%lf", &len);  //123.987654km 
 
 	km =(int)len;
@@ -17,7 +17,7 @@ void main(){
 	len = 100 * len - cm;
 	mm = (int)(10 * len);
 		printf("===========================\n");
-	    printf("ÇĞ¹ø:%d, ÀÌ¸§:%s\n",number,name);
+	    printf("ë‚˜:%d, ì´ë¦„:%s\n",number,name);
 	    printf("%d km , %d m , %dcm , %d mm\n",km,m,cm,mm);
 	    printf("===========================\n");
 }
@@ -28,15 +28,15 @@ void main(){
 
 
 
-//  ÃÊ ¼ö¸¦ ÀÔ·ÂÇØ¼­ ³â,°³¿ù,ÀÏ,½Ã,ºĞ,ÃÊ·Î º¯È¯ÇÏ±â
+//  ì´ˆ ìˆ˜ë¥¼ ì…ë ¥í•´ì„œ ë…„,ê°œì›”,ì¼,ì‹œ,ë¶„,ì´ˆë¡œ ë³€í™˜í•˜ê¸°
 int main(void) {
 	int class_number,input, year, month, day, hour, min, sec,rest;
 		char name[10];
-		printf("ÇĞ¹ø°ú ÀÌ¸§À» ÀÔ·ÂÇÏ½Ã¿À:");
+		printf("ë‚˜ì´ ì´ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		scanf("%d %s",&class_number,name);
-		printf("ÃÊ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+		printf("ì´ˆ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
 		scanf("%d", &input);
-		printf("ÇĞ¹ø:%d , ÀÌ¸§:%s\n", class_number,name);
+		printf("ë‚˜:%d , ì´ë¦„:%s\n", class_number,name);
 		year = input / (3600 * 24 * 365);
 		rest = input % (3600 * 24 * 365);
 		month = rest / (3600 * 24 * 30);
@@ -47,7 +47,7 @@ int main(void) {
 		rest = rest % 3600;
 		min = rest / 60;
 		sec = rest % 60;
-		printf("%dÃÊ´Â %d³â %d°³¿ù %dÀÏ %d½Ã %dºĞ %dÃÊ ÀÔ´Ï´Ù.\n", 
+		printf("%dì´ˆëŠ” %dë…„ %dê°œì›” %dì¼ %dì‹œ %dë¶„ %dì´ˆ ì…ë‹ˆë‹¤.\n", 
 		 input, year, month, day, hour, min, sec);
 }
 
@@ -58,22 +58,22 @@ int main(void) {
 
 
 
-// °Å¸®¿Í ½ºÇÇµå¸¦ ÀÔ·Â¹Ş¾Æ¼­ °É¸®´Â ½Ã°£ , ½Ã°£ / ºĞ / ÃÊ·Î ±¸ÇÏ±â
+// ê±°ë¦¬ì™€ ìŠ¤í”¼ë“œë¥¼ ì…ë ¥ë°›ì•„ì„œ ê±¸ë¦¬ëŠ” ì‹œê°„ , ì‹œê°„ / ë¶„ / ì´ˆë¡œ êµ¬í•˜ê¸°
 #include <stdio.h>
 int main(void) {
 
 	int distance, speed;
 	int hour, min;
 	double time, sec;
-	printf("°Å¸®¿Í ¼Ó·ÂÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
-	scanf("%d%d", &distance, &speed);// °Å¸®¿Í ½ºÇÇµå¸¦ ÀÔ·ÂÇÑ´Ù
-	time = ((double)distance / speed)*3600.0;// ½Ã°£ = ¼Óµµ/°Å¸®       t=s/v
+	printf("ê±°ë¦¬ì™€ ì†ë ¥ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+	scanf("%d%d", &distance, &speed);// ê±°ë¦¬ì™€ ìŠ¤í”¼ë“œë¥¼ ì…ë ¥í•œë‹¤
+	time = ((double)distance / speed)*3600.0;// ì‹œê°„ = ì†ë„/ê±°ë¦¬       t=s/v
 	hour = time / 3600;
 	time = time - (3600 * hour);
 	min = time / 60;
 	time = time - (60 * min);
 	sec = time;
-	printf("°É¸®´Â ½Ã°£Àº : %d ½Ã°£, %dºĞ,%.3lfÃÊÀÔ´Ï´Ù.\n", hour, min, sec);
+	printf("ê±¸ë¦¬ëŠ” ì‹œê°„ì€ : %d ì‹œê°„, %dë¶„,%.3lfì´ˆì…ë‹ˆë‹¤.\n", hour, min, sec);
 	return 0;
 }
 
@@ -85,21 +85,21 @@ int main(void) {
 
 
 
-// Çà¼ºÀÇ ¹İÁö¸§°ú ¼Ó·Â¹Ş¾Æ¼­ °É¸®´Â ½Ã°£ , ½Ã°£ / ºĞ / ÃÊ·Î ±¸ÇÏ±â
+// í–‰ì„±ì˜ ë°˜ì§€ë¦„ê³¼ ì†ë ¥ë°›ì•„ì„œ ê±¸ë¦¬ëŠ” ì‹œê°„ , ì‹œê°„ / ë¶„ / ì´ˆë¡œ êµ¬í•˜ê¸°
 void main() {
 	int km,hour, radio, min;
 	double time, sec, cir;
-	printf("Çà¼ºÀÇ ¹İÁö¸§°ú ¼Ó·ÂÀÔ·Â:");
+	printf("í–‰ì„±ì˜ ë°˜ì§€ë¦„ê³¼ ì†ë ¥ì…ë ¥:");
 	scanf("%d%d", &radio,&km);
 
-	cir = 1000*2 * 3.14*radio; //µÑ·¹ ±¸ÇÏ´Â
+	cir = 1000*2 * 3.14*radio; //ë‘˜ë ˆ êµ¬í•˜ëŠ”
 	time = cir / km;
-	hour = time / 3600; //1½Ã°£°ª
+	hour = time / 3600; //1ì‹œê°„ê°’
 	time = time - (3600 * hour);
 	min = time / 60;
 	time = time - (60 * min);
 	sec = time;
-	printf("°É¸®´Â½Ã°£: %d½Ã°£ %dºĞ %.3lfÃÊ°É¸³´Ï´Ù.\n", hour, min, sec);
+	printf("ê±¸ë¦¬ëŠ”ì‹œê°„: %dì‹œê°„ %dë¶„ %.3lfì´ˆê±¸ë¦½ë‹ˆë‹¤.\n", hour, min, sec);
 	return 0;
 }
 
@@ -111,19 +111,19 @@ void main() {
 
 
 
-//À±³â°ú Æò³â ±¸ÇÏ±â
+//ìœ¤ë…„ê³¼ í‰ë…„ êµ¬í•˜ê¸°
 #include<stdio.h>
 void main() {
 	int y;
 	scanf("%d", &y);
-	//y%4=À±³â y%100=Æò³â y%400=À±³â ÆÛ¼¾Æ® xÀÇ5% x*5/100
+	//y%4=ìœ¤ë…„ y%100=í‰ë…„ y%400=ìœ¤ë…„ í¼ì„¼íŠ¸ xì˜5% x*5/100
 	if ((!(y%4))&&((y%100)||!(y%400)))
 	{
-		printf("À±³â\n");
+		printf("ìœ¤ë…„\n");
 	}
 	else
 	{
-		printf("Æò³â\n");
+		printf("í‰ë…„\n");
 	}
 	return 0;
 }
@@ -144,7 +144,7 @@ void main() {
 void main() {
 	int num = 1;
 	char yn;
-	printf("[%d] - ÇĞ¹ø:16040023, ÀÌ¸§:¼ÛÈ£¼®\n", num);
+	printf("[%d] - ë‚˜:21 ì´ë¦„:ì†¡í˜¸ì„\n", num);
 	for (int i = 0; i <= 9; i++)
 	{
 		for (int j = 0; j <= 9; j++)
@@ -156,7 +156,7 @@ void main() {
 		}
 		printf("\n");
 	}
-	printf("°è¼Ó ÇÏ½Ã°Ú½À´Ï±î? (y/n)");
+	printf("ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n)");
 	scanf("%c", &yn);
 	if (yn == 'y')
 	{
@@ -164,7 +164,7 @@ void main() {
 		{
 			
 			system("cls");
-			printf("[%d] - ÇĞ¹ø:16040023, ÀÌ¸§:¼ÛÈ£¼®\n", num++);
+			printf("[%d] - ë‚˜:21 , ì´ë¦„:ì†¡í˜¸ì„\n", num++);
 			for (int i = 0; i <= 9; i++)
 			{
 				for (int j = 0; j <= 9; j++)
@@ -176,7 +176,7 @@ void main() {
 				}
 				printf("\n");
 			}
-			printf("°è¼Ó ÇÏ½Ã°Ú½À´Ï±î? (y/n)");
+			printf("ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n)");
 			scanf("%c", &yn);
 
 		}
