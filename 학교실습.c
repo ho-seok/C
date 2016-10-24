@@ -1,24 +1,26 @@
-/*//³ª¸ÓÁö¿¬»êÀ» ÀÌ¿ëÇÑ ÃÊ´ÜÀ§ ½Ã°£/ºĞ/ÃÊ·Î º¯°æ//
+//ë‚˜ë¨¸ì§€ì—°ì‚°ì„ ì´ìš©í•œ ì´ˆë‹¨ìœ„ ì‹œê°„/ë¶„/ì´ˆë¡œ ë³€ê²½//
 #include <stdio.h>
-#define SEC_PER_MINUTE 60 //60ÃÊ´Â1ºĞÀÌ´Ù
-#define SEC_PER_HOUR 3600 //3600ÃÊ´Â1½Ã°£ÀÌ´Ù
-#define MINUTE_PER_HOUR 60 //60ºĞÀº 1½Ã°£ÀÌ´Ù
+#define SEC_PER_MINUTE 60 //60ì´ˆëŠ”1ë¶„ì´ë‹¤
+#define SEC_PER_HOUR 3600 //3600ì´ˆëŠ”1ì‹œê°„ì´ë‹¤
+#define MINUTE_PER_HOUR 60 //60ë¶„ì€ 1ì‹œê°„ì´ë‹¤
 int main(void)
 	{
 		int input, hour, minute, second;
-		printf("ÃÊ´ÜÀ§ÀÇ ½Ã°£À» ÀÔ·ÂÇÏ½Ã¿ä:(32¾ïÃÊÀÌÇÏ) ");
+		printf("ì´ˆë‹¨ìœ„ì˜ ì‹œê°„ì„ ì…ë ¥í•˜ì‹œìš”:(32ì–µì´ˆì´í•˜) ");
 		scanf("%d", &input);
 
 		hour = input / SEC_PER_HOUR;
 		minute = input / SEC_PER_MINUTE - (hour * MINUTE_PER_HOUR);
 		second = input % SEC_PER_MINUTE;
-		printf("%dÃÊ´Â %d½Ã %dºĞ %dÃÊÀÔ´Ï´Ù. \n", input, hour, minute, second);
+		printf("%dì´ˆëŠ” %dì‹œ %dë¶„ %dì´ˆì…ë‹ˆë‹¤. \n", input, hour, minute, second);
 		return 0;
 	}
-*/
 
 
-/*
+
+
+
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -28,34 +30,41 @@ int main() {
 	int max;
 	int i;
 	
-	srand(time(0)); //³­¼ö »ı¼º½Ã ÃÊ±âÈ­½ÃÅ°´Â ±¸¹®
-	printf("5°³ÀÇ ³­¼ö¸¦ »ı¼ºÇÕ´Ï´Ù.\n");
+	srand(time(0)); //ë‚œìˆ˜ ìƒì„±ì‹œ ì´ˆê¸°í™”ì‹œí‚¤ëŠ” êµ¬ë¬¸
+	printf("5ê°œì˜ ë‚œìˆ˜ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.\n");
 	for ( i = 0; i < 5; i++)
 	{
-		nums[i] = (rand()%10)+1; // 1~10±îÁöÀÇ ³­¼ö»ı¼º randÇÔ¼ö¿¡ ³ª¸ÓÁö ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÔ
+		nums[i] = (rand()%10)+1; // 1~10ê¹Œì§€ì˜ ë‚œìˆ˜ìƒì„± randí•¨ìˆ˜ì— ë‚˜ë¨¸ì§€ ì—°ì‚°ìë¥¼ ì´ìš©í•¨
 	}
-	max = nums[0]; // °¡Àå Ã¹¹øÂ°ÀÇ nums¸¦ max·Î ÁöÁ¤
+	max = nums[0]; // ê°€ì¥ ì²«ë²ˆì§¸ì˜ numsë¥¼ maxë¡œ ì§€ì •
 	for ( i = 1; i < 5; i++)
 	{
 		if (max < nums[i]) max = nums[i];
 	}
-	printf("°¡Àå Å« °ªÀº : %dÀÔ´Ï´Ù\n", max);
+	printf("ê°€ì¥ í° ê°’ì€ : %dì…ë‹ˆë‹¤\n", max);
 	return 0;
 }
-*/
 
 
-/* a¿Íb¸¦ Ä¡È¯ÇÏ´Â ¹æ¹ı
+
+
+
+
+ //aì™€bë¥¼ ì¹˜í™˜í•˜ëŠ” ë°©ë²•
 	int a = 2,b = 7;
 	int temp;
 	temp = a;
 	a = b;
 	b = temp;
-*/
 
 
-/*
-#include<stdio.h> //¹è¿­¿¡ ÀÓÀÇÀÇ ¼ıÀÚ¸¦ ÃÊ±âÈ­ÇÑ ÈÄ¿¡ °¢ ¼ıÀÚµéÀÇ À§Ä¡¸¦ ¹Ù²Ù´Â ÇÁ·Î±×·¥
+
+
+
+
+
+
+#include<stdio.h> //ë°°ì—´ì— ì„ì˜ì˜ ìˆ«ìë¥¼ ì´ˆê¸°í™”í•œ í›„ì— ê° ìˆ«ìë“¤ì˜ ìœ„ì¹˜ë¥¼ ë°”ê¾¸ëŠ” í”„ë¡œê·¸ë¨
 int main()
 {
 	int ary[] = { 1,2,3,4,5 };
@@ -63,7 +72,7 @@ int main()
 
 	size = sizeof(ary) / sizeof(ary[0]);
 
-	printf("Ã³À½ ¹è¿­¿¡ ÀúÀåµÈ °ª:");
+	printf("ì²˜ìŒ ë°°ì—´ì— ì €ì¥ëœ ê°’:");
 	for ( i = 0; i < size; i++)
 	{
 		printf("%2d", ary[i]);
@@ -75,17 +84,23 @@ int main()
 		ary[i] = ary[r];
 		ary[r] = temp;
 	}
-	printf("\n¹Ù²ï ¹è¿­¿¡ ÀúÀåµÈ °ª:");
+	printf("\në°”ë€ ë°°ì—´ì— ì €ì¥ëœ ê°’:");
 	for ( i = 0; i < size; i++)
 	{
 		printf("%2d", ary[i]);
 	}
 	return 0;
 }
-*/
 
 
-/*
+
+
+
+
+
+
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<Windows.h>
@@ -97,13 +112,13 @@ int main() {
 	int orgin[10] = { 0 };
 	int result[10] = { 0 };
 	int i, temp, j, size;
-	size = sizeof(orgin) / sizeof(orgin[0]); // 4*10 / 4 sizeof¿¬»êÀ» ÀÌ¿ëÇØ ¹è¿­Å©±â¸¦ µ¿ÀûÇÒ´ç size=10
-	srand(time(NULL)); // ³­¼ö »ı¼º½Ã ÃÊ±âÈ­
-	printf("µÎ°³ÀÇ ¹è¿­À» ÀÌ¿ëÇÑ ¹öºí¼ÒÆ® ÇÁ·Î±×·¥\n");
+	size = sizeof(orgin) / sizeof(orgin[0]); // 4*10 / 4 sizeofì—°ì‚°ì„ ì´ìš©í•´ ë°°ì—´í¬ê¸°ë¥¼ ë™ì í• ë‹¹ size=10
+	srand(time(NULL)); // ë‚œìˆ˜ ìƒì„±ì‹œ ì´ˆê¸°í™”
+	printf("ë‘ê°œì˜ ë°°ì—´ì„ ì´ìš©í•œ ë²„ë¸”ì†ŒíŠ¸ í”„ë¡œê·¸ë¨\n");
 	printf("orign:");
-	for (i = 0; i < 10; i++)       //¼­·Î ´Ù¸¥ ³­¼ö»ı¼º ÄÚµå
+	for (i = 0; i < 10; i++)       //ì„œë¡œ ë‹¤ë¥¸ ë‚œìˆ˜ìƒì„± ì½”ë“œ
 	{
-		orgin[i] = (rand() % 50) + 1; // 1~50±îÁö ³­¼ö»ı¼ºÈÄ orgin¹è¿­¿¡ ÀúÀå 
+		orgin[i] = (rand() % 50) + 1; // 1~50ê¹Œì§€ ë‚œìˆ˜ìƒì„±í›„ orginë°°ì—´ì— ì €ì¥ 
 		for (j = 0; j < i; j++)
 		{
 			if (orgin[i] == orgin[j])
@@ -113,25 +128,25 @@ int main() {
 			}
 		}
 	}
-	for (i = 0; i < 10; i++) //orgin[i]¹è¿­¿¡ ¼­·Î´Ù¸¥ ³­¼ö10°³°¡ »ı¼ºµÇÀÖ´Âµ¥ ±×°ªÀ» 10¹ø¹İº¹½ÃÄÑ result[i]¿¡ ÀúÀå
+	for (i = 0; i < 10; i++) //orgin[i]ë°°ì—´ì— ì„œë¡œë‹¤ë¥¸ ë‚œìˆ˜10ê°œê°€ ìƒì„±ë˜ìˆëŠ”ë° ê·¸ê°’ì„ 10ë²ˆë°˜ë³µì‹œì¼œ result[i]ì— ì €ì¥
 	{
 		printf(" %d ", orgin[i]);
 		result[i] = orgin[i];
 	}
-	for (i = 0; i < size - 1; i++)  //¸îÈ¸Àü ÇÒ°ÍÀÎ°¡ 9È¸Àü
+	for (i = 0; i < size - 1; i++)  //ëª‡íšŒì „ í• ê²ƒì¸ê°€ 9íšŒì „
 	{
-		for (j = 0; j < size - 1 - i; j++)    //ºñ±³È½¼ö Á¡Á¡ ÁÙ±â¶§¹®¿¡ size-1-i ¹öºí¼ÒÆ®ÀÇ ¹ıÄ¢  9-i
+		for (j = 0; j < size - 1 - i; j++)    //ë¹„êµíšŸìˆ˜ ì ì  ì¤„ê¸°ë•Œë¬¸ì— size-1-i ë²„ë¸”ì†ŒíŠ¸ì˜ ë²•ì¹™  9-i
 		{
 			if (result[j] > result[j + 1])
-			swap(&result[j], &result[j + 1]);//¿À¸§Â÷¼ø:¿ŞÂÊÀÌ ´õ Å©¸é Ä¡È¯ ³»¸²Â÷¼ø:¿À¸¥ÂÊÀÌ ´õ Å©¸é Ä¡È¯
+			swap(&result[j], &result[j + 1]);//ì˜¤ë¦„ì°¨ìˆœ:ì™¼ìª½ì´ ë” í¬ë©´ ì¹˜í™˜ ë‚´ë¦¼ì°¨ìˆœ:ì˜¤ë¥¸ìª½ì´ ë” í¬ë©´ ì¹˜í™˜
 		}
 	}
 	printf("\nresult:");
 	for (i = 0; i < 10; i++)
 	{
-		printf(" %d ", result[i]); //¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÈ °ªÀ» Ãâ·Â
+		printf(" %d ", result[i]); //ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ëœ ê°’ì„ ì¶œë ¥
 	}
-	printf("\nÇÑ¹ø ´õ ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+	printf("\ní•œë²ˆ ë” í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 	scanf(" %c",&how);
 	if (how == 'y')
 	{
@@ -147,11 +162,18 @@ void swap(int *xp, int *yp) {
 	*xp = *yp;
 	*yp = temp;
 }
-*/
 
 
-/*
-//Æ÷ÀÎÅÍ¸¦ ÀÌ¿ëÇÑ Å« ¼öºÎÅÍ Â÷·Ê·Î Ãâ·Â 
+
+
+
+
+
+
+
+
+
+//í¬ì¸í„°ë¥¼ ì´ìš©í•œ í° ìˆ˜ë¶€í„° ì°¨ë¡€ë¡œ ì¶œë ¥ 
 #include<stdio.h>
 void line_up(double *, double *, double *);
 void exchange(double *, double *);
@@ -159,12 +181,12 @@ void exchange(double *, double *);
 int main() {
 	double max, mid, min;
 	
-	printf("¼ıÀÚ ¼¼°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	printf("ìˆ«ì ì„¸ê°œë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	scanf("%lf%lf%lf", &max, &mid, &min);
 
 	line_up(&max, &mid, &min);
 
-	printf("Å« ¼öºÎÅÍ Â÷·Ê·Î Ãâ·ÂÇÏ¸é:%.0lf %.0lf% %.0lf\n", max, mid, min);
+	printf("í° ìˆ˜ë¶€í„° ì°¨ë¡€ë¡œ ì¶œë ¥í•˜ë©´:%.0lf %.0lf% %.0lf\n", max, mid, min);
 	return 0;	
 }
 void line_up(double *max, double *mid, double *min)
@@ -181,10 +203,15 @@ void exchange(double *xp ,double *yp)
 	*xp = *yp;
 	*yp = temp;
 }
-*/
 
 
-/*  Æ÷ÀÎÅÍÇÔ¼öÀÌ¿ëÇÑ ¿¬»ê½Ä ÇÔ¼ö
+
+
+
+
+
+
+   //  í¬ì¸í„°í•¨ìˆ˜ì´ìš©í•œ ì—°ì‚°ì‹ í•¨ìˆ˜
 #include<stdio.h>
 #include<Windows.h>
 void sum(int *, int*);
@@ -197,29 +224,29 @@ int main() {
 	HOW = 'y';
 	while (HOW=='y'||HOW=='Y')
 	{
-		printf("¼ö½ÄÀÔ·Â:");
-		scanf("%d%c%d",&a,&how,&b);¤©
+		printf("ìˆ˜ì‹ì…ë ¥:");
+		scanf("%d%c%d",&a,&how,&b);ã„¹
 		switch (how)
 		{
-		case '+':printf("======´õÇÏ±â ¿¬»êÀ» ½ÃÀÛÇÕ´Ï´Ù.======\n");
+		case '+':printf("======ë”í•˜ê¸° ì—°ì‚°ì„ ì‹œì‘í•©ë‹ˆë‹¤.======\n");
 			sum(&a, &b); getchar();
 			scanf("%c", &HOW);
 			break;
-		case '-':printf("======»©±â ¿¬»êÀ» ½ÃÀÛÇÕ´Ï´Ù.======\n");
+		case '-':printf("======ë¹¼ê¸° ì—°ì‚°ì„ ì‹œì‘í•©ë‹ˆë‹¤.======\n");
 			sum1(&a, &b); getchar();
 			scanf("%c", &HOW);
 			break;
-		case '*':printf("======´õÇÏ±â ¿¬»êÀ» ½ÃÀÛÇÕ´Ï´Ù.======\n");
+		case '*':printf("======ë”í•˜ê¸° ì—°ì‚°ì„ ì‹œì‘í•©ë‹ˆë‹¤.======\n");
 			sum2(&a, &b); getchar();
 			scanf("%c", &HOW);
 			break;
-		case '/':printf("======³ª´©±â ¿¬»êÀ» ½ÃÀÛÇÕ´Ï´Ù.======\n");
-			if(b == 0)printf("Àß¸øÀÔ·Â\n");
+		case '/':printf("======ë‚˜ëˆ„ê¸° ì—°ì‚°ì„ ì‹œì‘í•©ë‹ˆë‹¤.======\n");
+			if(b == 0)printf("ì˜ëª»ì…ë ¥\n");
 			sum3(&a, &b); getchar();
 			scanf("%c", &HOW);
 			break;
-		default:printf("Àß¸øÀÔ·Â\n");
-			printf("¿¬»êÀ»°è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)\n");
+		default:printf("ì˜ëª»ì…ë ¥\n");
+			printf("ì—°ì‚°ì„ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)\n");
 			break;
 		}
 		if (HOW == 'y' || HOW == 'Y')
@@ -228,10 +255,10 @@ int main() {
 		}
 		else if (HOW == 'n' || HOW == 'N') {
 			system("cls");
-			printf("¿¬»êÀ» Á¾·áÇÕ´Ï´Ù\n");
+			printf("ì—°ì‚°ì„ ì¢…ë£Œí•©ë‹ˆë‹¤\n");
 		}
 		else {
-			system("cls"); printf("Àß¸øÀÔ·Â\n");
+			system("cls"); printf("ì˜ëª»ì…ë ¥\n");
 		}
 	}
 	return 0;
@@ -240,35 +267,41 @@ void sum(int *pt, int *ptr)
 {
 	int re;
 	re = *pt + *ptr;
-	printf("%d+%d=%dÀÔ´Ï´Ù\n", *pt, *ptr,re);
-	printf("¿¬»êÀ» °è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+	printf("%d+%d=%dì…ë‹ˆë‹¤\n", *pt, *ptr,re);
+	printf("ì—°ì‚°ì„ ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 }
 void sum1(int *pt, int *ptr)
 {
 	int re;
 	re = *pt - *ptr;
-	printf("%d-%d=%dÀÔ´Ï´Ù\n", *pt, *ptr, re);
-	printf("¿¬»êÀ» °è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+	printf("%d-%d=%dì…ë‹ˆë‹¤\n", *pt, *ptr, re);
+	printf("ì—°ì‚°ì„ ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 }
 void sum2(int *pt, int *ptr)
 {
 	int re;
 	re = *pt * *ptr;
-	printf("%d*%d=%dÀÔ´Ï´Ù\n", *pt, *ptr, re);
-	printf("¿¬»êÀ» °è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+	printf("%d*%d=%dì…ë‹ˆë‹¤\n", *pt, *ptr, re);
+	printf("ì—°ì‚°ì„ ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 
 }
 void sum3(int *pt, int *ptr)
 {
 	int re;
 	re = *pt / *ptr;
-	printf("%d/%d=%dÀÔ´Ï´Ù\n", *pt, *ptr, re);
-	printf("¿¬»êÀ» °è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+	printf("%d/%d=%dì…ë‹ˆë‹¤\n", *pt, *ptr, re);
+	printf("ì—°ì‚°ì„ ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 }
-*/
 
 
-/* 
+
+
+
+
+
+
+
+
 #include<stdio.h>
 #include<Windows.h>
 int main() {
@@ -276,7 +309,7 @@ int main() {
 	char how = 'y';
 	while (how=='y')
 	{
-		printf("[%d] - ÇĞ¹ø:16040023,ÀÌ¸§:¼ÛÈ£¼® \n",e++);
+		printf("[%d] - í•™ë²ˆ:16040023,ì´ë¦„:ì†¡í˜¸ì„ \n",e++);
 		for (int i = 0; i < 9; i++)
 		{
 			for (int j = 0; j < 10; j++)
@@ -288,7 +321,7 @@ int main() {
 			}
 			printf("\n");
 		}
-		printf("°è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+		printf("ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 		scanf(" %c",&how);
 		if (how=='y')
 		{
@@ -298,10 +331,15 @@ int main() {
 	}
 	return 0;
 }
-*/
 
 
-/*
+
+
+
+
+
+
+
 #include <stdio.h>
 #define SWAP(a,b) { int t;t=a;a=b;b=t; }
 void SelectionSort(char *ar, int num)
@@ -309,36 +347,48 @@ void SelectionSort(char *ar, int num)
 	int minidx;
 	int i, j;
 
-	// ¹è¿­ ÀüÃ¼ ¼øÈ¸.
+	// ë°°ì—´ ì „ì²´ ìˆœíšŒ.
 	for (i = 0; i<num - 1; i++) {
-		// iÀÌÈÄÀÇ ÃÖ¼Ò°ªÀ» Ã£´Â´Ù.
+		// iì´í›„ì˜ ìµœì†Œê°’ì„ ì°¾ëŠ”ë‹¤.
 		for (minidx = i, j = i + 1; j<num; j++) {
 			if (ar[minidx] > ar[j]) {
 				minidx = j;
 			}
 		}
-		// ÃÖ¼Ò°ªÀ» ÇöÀçÇ×°ú ±³È¯.
+		// ìµœì†Œê°’ì„ í˜„ì¬í•­ê³¼ êµí™˜.
 		if (minidx != i) {
 			SWAP(ar[minidx], ar[i]);
 		}
 	}
 }
-*/
 
 
-/*
+
+
+
+
+
+
+
+
 void main()
 {
 	char str[] = "winapi";
 
-	printf("Á¤·Ä ÀüÀÇ ¹®ÀÚ¿­ : %s\n", str);
+	printf("ì •ë ¬ ì „ì˜ ë¬¸ìì—´ : %s\n", str);
 	SelectionSort(str, strlen(str));
-	printf("Á¤·ÄµÈ ¹®ÀÚ¿­ : %s\n", str);
+	printf("ì •ë ¬ëœ ë¬¸ìì—´ : %s\n", str);
 }
-*/
 
 
-/*
+
+
+
+
+
+
+
+
 #include<stdio.h>
 void two(int *);
 void five(int *);
@@ -346,7 +396,7 @@ void eight(int *);
 void nine(int *);
 int main() {
 	int a,b;
-	printf("2,5,8,9 Áß ´Ü ÀÔ·Â:");
+	printf("2,5,8,9 ì¤‘ ë‹¨ ì…ë ¥:");
 	scanf("%d",&a);
 	switch (a)
 	{
@@ -358,7 +408,7 @@ int main() {
 		break;
 	case 9:nine(&a);
 		break;
-	default:printf("Àß¸øÀÔ·ÂÇÔ");
+	default:printf("ì˜ëª»ì…ë ¥í•¨");
 		break;
 	}
 	return 0;
@@ -424,20 +474,26 @@ void nine(int *a) {
 		}
 	}
 }
-*/
 
 
-/*
+
+
+
+
+
+
+
+
 #include<stdio.h>
 #include<Windows.h>
 void sum2(int re) { 
 	double ave;
 	ave = re / 5;
-	printf("Æò±Õ:%.2lf", ave);
+	printf("í‰ê· :%.2lf", ave);
 }
 int sum(int a[]) {
-	int re=0; //¹İµå½Ã ÃÊ±âÈ­¸¦ ÇØÁà¾ßµÊ
-	printf("5°³ÀÇ ¼ö ÀÔ·Â  ");
+	int re=0; //ë°˜ë“œì‹œ ì´ˆê¸°í™”ë¥¼ í•´ì¤˜ì•¼ë¨
+	printf("5ê°œì˜ ìˆ˜ ì…ë ¥  ");
 	for (int i = 0; i < 5; i++)
 	{
 		
@@ -453,19 +509,19 @@ int main() {
 	while (how == 'y')
 	{
 		int a[5] = { 0 };
-		printf("1.ÃÑÇÕ 2.Æò±Õ  ");
+		printf("1.ì´í•© 2.í‰ê·   ");
 		scanf("%d", &b);
 		switch (b)
 		{
 		case 1: re = sum(a);
-			printf("ÃÑÇÕ:%d\n",re);
+			printf("ì´í•©:%d\n",re);
 			break;
-		case 2:  sum2(sum(a)); //¸ÕÀú sum(a)ÇÔ¼ö ½ÇÇà ÈÄ sum2 ÇÔ¼ö¿¡¼­ sumÇÔ¼ö ¸®ÅÏ°ªÀ» ¹ŞÀ½ sum(int re)
+		case 2:  sum2(sum(a)); //ë¨¼ì € sum(a)í•¨ìˆ˜ ì‹¤í–‰ í›„ sum2 í•¨ìˆ˜ì—ì„œ sumí•¨ìˆ˜ ë¦¬í„´ê°’ì„ ë°›ìŒ sum(int re)
 			break;
-		default:printf("Àß¸øÀÔ·Â\n");
+		default:printf("ì˜ëª»ì…ë ¥\n");
 			break;
 		}
-		printf("ÇÑ¹ø ´õ ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+		printf("í•œë²ˆ ë” í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 		scanf(" %c",&how);
 		if (how == 'y' || how == 'Y')
 		{
@@ -473,16 +529,25 @@ int main() {
 		}
 		else if (how == 'n' || how == 'N') {
 			system("cls");
-			printf("Á¾·á\n");
+			printf("ì¢…ë£Œ\n");
 			break;
 		}
 	}
 	return 0;
 }
-*/
 
-/*
-#include <stdio.h> // sizeof µ¥ÀÌÅÍÅ©±â ±¸ÇÏ´Â ÄÚµå
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h> // sizeof ë°ì´í„°í¬ê¸° êµ¬í•˜ëŠ” ì½”ë“œ
 void main()
 
 {
@@ -497,11 +562,19 @@ printf("i=%d\n", sizeof(i));
 printf("string=%d\n", sizeof("string"));
 
 }
-*/
 
 
-//Á¤È®ÇÑ 1³âÀ» ÀÏ,½Ã°£,ºĞ,ÃÊ·Î±¸ÇÏ±â
-/*
+
+
+
+
+
+
+
+
+
+//ì •í™•í•œ 1ë…„ì„ ì¼,ì‹œê°„,ë¶„,ì´ˆë¡œêµ¬í•˜ê¸°
+
 #include<stdio.h>
 void main() {
 
@@ -512,24 +585,29 @@ hour = year_day * 24;
 min = hour * 60;
 sec = min * 60;
 
-printf("1³âÀº Á¤È®È÷\n%fÀÏ\n%f½Ã°£\n%fºĞ\n%fÃÊÀÔ´Ï´Ù.\n", year_day, hour, min, sec);
+printf("1ë…„ì€ ì •í™•íˆ\n%fì¼\n%fì‹œê°„\n%fë¶„\n%fì´ˆì…ë‹ˆë‹¤.\n", year_day, hour, min, sec);
 }
-*/
 
 
-/*
+
+
+
+
+
+
+
 #include<stdio.h>
 void main() {
 int* ptr;
 int x = 10;
 ptr = &x;
-printf("ptrÀÇ ÁÖ¼Ò:%d\n",&ptr);
-printf("ptrÀÇ °ª:%d\n", ptr);
-printf("ptrÀÌ °¡¸£Å°´Â °ª:%d\n", *ptr); //ptr¾È¿¡ µé¾î°¡ÀÖ´Â xÀÇÁÖ¼Ò¿¡ ÇØ´çµÇ´Â ¸Ş¸ğ¸®°ªÀ» °¡¸®Å²´Ù.
-printf("x ÀÇ °ª:%d\n", x);
-printf("x ÀÇ ÁÖ¼Ò:%d\n", &x);
+printf("ptrì˜ ì£¼ì†Œ:%d\n",&ptr);
+printf("ptrì˜ ê°’:%d\n", ptr);
+printf("ptrì´ ê°€ë¥´í‚¤ëŠ” ê°’:%d\n", *ptr); //ptrì•ˆì— ë“¤ì–´ê°€ìˆëŠ” xì˜ì£¼ì†Œì— í•´ë‹¹ë˜ëŠ” ë©”ëª¨ë¦¬ê°’ì„ ê°€ë¦¬í‚¨ë‹¤.
+printf("x ì˜ ê°’:%d\n", x);
+printf("x ì˜ ì£¼ì†Œ:%d\n", &x);
 
 return 0;
 }
-*/
+
 
