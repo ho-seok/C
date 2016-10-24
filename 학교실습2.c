@@ -4,7 +4,7 @@ void main(){
 	char name[30];
 	int number, km,m,cm,mm;
 	double len ;
-	printf("나(정수), 이름(문자열)을 입력하세요:");
+	printf("나이(정수), 이름(문자열)을 입력하세요:");
 	scanf("%d %s", &number, name);
 	printf("소수점 이하 자리수가 10자리 이상인 실수를 입력하세요:");
 	scanf("%lf", &len);  //123.987654km 
@@ -17,7 +17,7 @@ void main(){
 	len = 100 * len - cm;
 	mm = (int)(10 * len);
 		printf("===========================\n");
-	    printf("나:%d, 이름:%s\n",number,name);
+	    printf("나이:%d, 이름:%s\n",number,name);
 	    printf("%d km , %d m , %dcm , %d mm\n",km,m,cm,mm);
 	    printf("===========================\n");
 }
@@ -36,7 +36,7 @@ int main(void) {
 		scanf("%d %s",&class_number,name);
 		printf("초 수를 입력하시오:");
 		scanf("%d", &input);
-		printf("나:%d , 이름:%s\n", class_number,name);
+		printf("나이:%d , 이름:%s\n", class_number,name);
 		year = input / (3600 * 24 * 365);
 		rest = input % (3600 * 24 * 365);
 		month = rest / (3600 * 24 * 30);
@@ -144,7 +144,7 @@ void main() {
 void main() {
 	int num = 1;
 	char yn;
-	printf("[%d] - 나:21 이름:송호석\n", num);
+	printf("[%d] - 나이:21 이름:송호석\n", num);
 	for (int i = 0; i <= 9; i++)
 	{
 		for (int j = 0; j <= 9; j++)
@@ -164,7 +164,7 @@ void main() {
 		{
 			
 			system("cls");
-			printf("[%d] - 나:21 , 이름:송호석\n", num++);
+			printf("[%d] - 나이:21 , 이름:송호석\n", num++);
 			for (int i = 0; i <= 9; i++)
 			{
 				for (int j = 0; j <= 9; j++)
@@ -184,7 +184,6 @@ void main() {
 	}
 
 }
-
 
 
 
