@@ -1,5 +1,5 @@
 
-  //소수점 이하 자리수가 10자리 이상인 실수를 받고 KM , M , CM , MM 로 변환하기
+  //소수점 이하 자리수가 10자리 이상인 실수를 받고 KM , M , CM , MM 로 변환하기 !
 void main(){
 	char name[30];
 	int number, km,m,cm,mm;
